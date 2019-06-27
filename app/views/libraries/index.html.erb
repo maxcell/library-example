@@ -1,0 +1,5 @@
+<%= link_to "sort", "/libraries?sorted=true" %>
+
+<% @libraries.each do |l| %>
+  <li><%= l.name %></li>
+<% end %>

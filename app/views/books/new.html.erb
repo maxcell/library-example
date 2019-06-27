@@ -1,0 +1,12 @@
+<% if flash.now[:error] %>
+  <% flash.now[:error].each do |err| %>
+    <li><%= err %></li>
+  <% end %>
+<% end %>
+
+<h2>Create new book</h2>
+<%= form_for @book do |f| %>
+  <%= f.text_field :name %>
+  <%= f.collection_select :library_id, @libraries, :id, :name %>
+  <%= f.submit %>
+<%  end %>

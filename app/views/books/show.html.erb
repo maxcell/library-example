@@ -1,0 +1,6 @@
+<% if flash[:notice] %>
+  <h2>Successfully created a thing!</h2>
+<% end %>
+
+<h2><%= @book.name %></h2>
+<p><%= @book.library.name %></p>
